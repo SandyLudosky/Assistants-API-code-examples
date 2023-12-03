@@ -1,0 +1,24 @@
+{
+  "weather": {
+    "type": "function",
+    "function": {
+      "name": "weather",
+      "description": "Get the weather in a specific location.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The city and state (e.g., San Francisco, CA) for which you want to retrieve weather information."
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["celsius", "fahrenheit"],
+            "description": "The preferred unit for temperature (celsius or fahrenheit)."
+          }
+        },
+        "required": ["location", "unit"]
+      }
+    }
+  }
+}
